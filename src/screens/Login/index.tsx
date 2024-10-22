@@ -45,13 +45,14 @@ export function Login({ navigation }: LoginTypes) {
                 <KeyboardAvoidingView>
 
                     <Text style={styles.title} >Login</Text>
-                    <View style={styles.rerere}>
+                    <View style={styles.container2}>
+                        <Text style={styles.nominho}> Name </Text>
                      <View style={styles.formRow}>
 
-                        <FontAwesome name="user-circle" size={24} color={colors.Cinza} />
+                        <FontAwesome name="user-circle" style={styles.icon} color={colors.Cinza} />
 
                         <TextInput
-                            placeholderTextColor={colors.third}
+                            placeholderTextColor={colors.Cinza}
                             style={styles.input}
                           
                             keyboardType="email-address"
@@ -59,11 +60,12 @@ export function Login({ navigation }: LoginTypes) {
                             onChangeText={(i) => handleChange({ email: i })}
                         />
                      </View>
+                     <Text style={styles.nominho}> Senha </Text>
                      <View style={styles.formRow} >
                         <Entypo name="key" style={styles.icon} />
 
                         <TextInput
-                            placeholderTextColor={colors.third}
+                            placeholderTextColor={colors.Cinza}
                             style={styles.input}
                 
                             secureTextEntry={true}
@@ -71,6 +73,7 @@ export function Login({ navigation }: LoginTypes) {
                             onChangeText={(i) => handleChange({ password: i })}
                         />
                     </View>
+                    <Text style={styles.salvacao}> Esqueci Minha Senha</Text>
                     </View>
                     <ButtonInterface title='Login' type='primary' onPressI={handleSignIn} />
                     <ButtonInterface title='Cadastre-se'

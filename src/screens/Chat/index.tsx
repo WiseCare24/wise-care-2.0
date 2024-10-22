@@ -1,12 +1,16 @@
 import { StatusBar} from 'expo-status-bar';
-import {StyleSheet, Text, View, TextInput, TouchableOpacity, KeyboardAvoidingView} from 'react-native';
+import {StyleSheet, Text, View, TextInput, TouchableOpacity, KeyboardAvoidingView,  } from 'react-native';
 import {styles} from "./styles";
 import {Feather} from '@expo/vector-icons';
 import {useState} from 'react';
+import { useCallback } from 'react';
+import {useAuth} from "../../hook/auth";
+import React from 'react';
+import { ButtonInterface } from '../../components/ButtonInterface';
 
 export function ScreenChat (){
     const [messageText, setMessageText] = useState("");
-
+    const {user, signOut} = useAuth()
     const sendMessage = useCallback(() => {
        console.log(messageText);
        setMessageText("");
@@ -15,6 +19,7 @@ export function ScreenChat (){
         <KeyboardAvoidingView>
          <View style={styles.container}>
             <View style={styles.inputcontainer}>
+               <Text style={styles.p}> WCIA</Text>
             <TextInput style={styles.textbox} 
             placeholder='Comece a conversar' 
             onChangeText={(Text) => setMessageText(Text)}
@@ -23,6 +28,12 @@ export function ScreenChat (){
                  <Feather name="send" size={18} color="black" />
                 </TouchableOpacity>
           </View>
+          <View>
+                <ButtonInterface type='primary' title="Sair" 
+                onPressI={async()=>await signOut()}>
+                </ButtonInterface>
+            </View>
+         
         </View>
        </KeyboardAvoidingView>
      );

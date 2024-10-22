@@ -1,1 +1,1 @@
-export {QrCode as ScreenQrCode} from "./Qrcode"
+export {Login as ScreenLogin} from "./Login"

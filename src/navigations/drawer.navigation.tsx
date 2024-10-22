@@ -3,9 +3,6 @@ import { createDrawerNavigator, DrawerNavigationProp } from '@react-navigation/d
 import { colors } from '../styles/globalstyle';
 import { FontAwesome, Ionicons } from '@expo/vector-icons';
 import { TabNavigation } from './tab.navigation';
-import { Camera } from '../screens/Camera';
-import { Imagens } from '../screens/Imagens';
-import { QrCode } from '../screens/Qrcode';
 type DrawerParamList = {
     Tab: undefined
     Camera: undefined
@@ -21,13 +18,13 @@ export function DrawerNavigation() {
     const Drawer = createDrawerNavigator<DrawerParamList>()
     return (
         <Drawer.Navigator screenOptions={{
-            headerStyle: { backgroundColor: colors.secondary },
-            headerTintColor: colors.primary,
+            headerStyle: { backgroundColor: colors.Cinza },
+            headerTintColor: colors.Cinza,
             drawerStyle: {
-                backgroundColor: colors.primary,
+                backgroundColor: colors.Cinza,
             },
-            drawerActiveTintColor: colors.third,
-            drawerInactiveTintColor: colors.third
+            drawerActiveTintColor: colors.Cinza,
+            drawerInactiveTintColor: colors.Cinza
 
         }}>
             <Drawer.Screen name='Tab' component={TabNavigation}
@@ -35,29 +32,9 @@ export function DrawerNavigation() {
                     drawerLabel: 'Perfil',
                     headerTitle: 'Perfil',
                     drawerIcon: () => (
-                        <Ionicons name="person" size={24} color={colors.third} />
+                        <Ionicons name="person" size={24} color={colors.Cinza} />
                     ),
                 }} />
-
-            <Drawer.Screen name='Camera' component={Camera}
-                options={{
-                    drawerIcon: () => (
-                        <Ionicons name="camera" size={24} color={colors.third} />
-                    ),
-                }} />
-            <Drawer.Screen name='Imagem' component={Imagens}
-                options={{
-                    drawerIcon: () => (
-                        <FontAwesome name="picture-o" size={24} color={colors.third} />
-                    ),
-                }} />
-
-            <Drawer.Screen name='QrCode' component={QrCode}
-                options={{
-                    drawerIcon: () => (
-                        <FontAwesome name="qrcode" size={24} color={colors.third} />
-                    ),
-                }}       />
 
         </Drawer.Navigator>
 

@@ -38,7 +38,7 @@ export const styles = StyleSheet.create({
         fontFamily: 'PaytoneOne_400Regular',
         fontSize: 20,
         textAlign: 'center',
-        
+        margin: 5,
         color: colors.Principal,
     }
 

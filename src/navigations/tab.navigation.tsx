@@ -1,12 +1,12 @@
 import React from 'react';
 import { createBottomTabNavigator, BottomTabNavigationProp } from '@react-navigation/bottom-tabs';
-import { Mensagem } from '../screens/Mensagem';
 import { Perfil } from '../screens/Perfil';
+import { ScreenChat } from '../screens/Chat';
 import { colors } from '../styles/globalstyle';
-import { AntDesign, Ionicons } from '@expo/vector-icons';
-import { MessageNavigation } from './message.navigation';
+import { AntDesign, Ionicons } from '@expo/vector-icons'
 
 type TabParamList = {
+    Chat: undefined
     Perfil: undefined
     Mensagem: undefined
 }
@@ -19,28 +19,28 @@ export function TabNavigation() {
     return (
         <Tab.Navigator
             screenOptions={{
-                tabBarActiveBackgroundColor: colors.primary,
-                tabBarActiveTintColor: colors.primary,
+                tabBarActiveBackgroundColor: colors.Cinza,
+                tabBarActiveTintColor: colors.Cinza,
                 headerShown: false,
-                tabBarInactiveBackgroundColor: colors.third,
-                tabBarInactiveTintColor: colors.primary,
+                tabBarInactiveBackgroundColor: colors.Cinza,
+                tabBarInactiveTintColor: colors.Cinza,
             }}
         >
-
-            <Tab.Screen name='Perfil' component={Perfil}
+            <Tab.Screen name='Chat' component={ScreenChat}
                 options={{
                     tabBarIcon: () => (
-                        <Ionicons name="person" size={24} color={ colors.fourth } /> 
+                        <Ionicons name="person" size={24} color={ colors.Cinza } /> 
                     ),
 }}
 />
-            <Tab.Screen name='Mensagem' component={MessageNavigation}
+            <Tab.Screen name='Perfil' component={Perfil}
                 options={{
                     tabBarIcon: () => (
-                        <AntDesign name="message1" size={24} color={ colors.fourth } />
-),
+                        <Ionicons name="person" size={24} color={ colors.Cinza } /> 
+                    ),
 }}
 />
+            
         </Tab.Navigator>
     )
 }

@@ -5,6 +5,7 @@ import {StyleSheet} from 'react-native'
 export const colors = {
     Principal:"#84A9A0",
     Verdeclaro:"#EO8E1",
+    Verdeclarodois:"#CFDFD1",
     Bege:"#FBF5E9",
     Preto:"#000000",
     Branco:"#FFFFFF",
