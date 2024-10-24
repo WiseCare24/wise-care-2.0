@@ -35,7 +35,7 @@ export function DrawerNavigation() {
                         <Ionicons name="person" size={24} color={colors.Cinza} />
                     ),
                 }} />
-
+            
         </Drawer.Navigator>
 
 

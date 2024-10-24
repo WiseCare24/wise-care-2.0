@@ -6,17 +6,20 @@ export const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent:'center',
         flex: 1,
+        backgroundColor: colors.Verdeclarodois,
     },
     textbox:{
       flex: 1
+     
     },
     inputcontainer:{
         flexDirection: 'row',
         backgroundColor: colors.Verdeclarodois,
-        padding: 50,
+        paddingTop: 50,
+        alignSelf:'center',
     },
     p:{
-        color:colors.Branco,
+        color:colors.Verdeclarodois,
     },
     formRow: {
         width: 290,
@@ -25,7 +28,7 @@ export const styles = StyleSheet.create({
         flexDirection: "row",
         alignItems: "center",
         borderWidth: 0.7,
-        borderColor: colors.Branco,
+        borderColor: colors.Verdeclaro,
         borderRadius: 30,
         backgroundColor:colors.Principal
     },
@@ -37,4 +40,11 @@ export const styles = StyleSheet.create({
         justifyContent: 'center',
 
     },
+    logo:{
+        margin:10,
+        alignSelf:"center",
+        paddingTop: 10,
+        resizeMode: 'contain',
+        aspectRatio: 0.3
+       },
 });

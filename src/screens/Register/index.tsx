@@ -100,9 +100,13 @@ export function Register({ navigation }: LoginTypes) {
                         />
                     </View>
                 </View>
+
                 <ButtonInterface title='Salvar' type='secondary' onPressI={handleRegister} />
                 <ButtonInterface title='Voltar' type='primary' onPressI={handleGoBack} />
+                
             </KeyboardAvoidingView >
+
+
             <View style={styles.container3}>
                 <Text style={styles.termos}> Termos de Política de Privacidade </Text> 
            <Text>Ao utilizar o serviço, o usuário manifesta sua livre, expressa e inequívoca concordância com relação ao conteúdo deste Termo de Uso e estará legalmente vinculado a todas as condições aqui previstas. </Text>  

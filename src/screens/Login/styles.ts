@@ -58,8 +58,8 @@ export const styles = StyleSheet.create({
     salvacao:{
         marginRight:70,
         marginLeft:75,
-        marginTop:0,
-        fontSize: 15, 
+        marginTop:50,
+        fontSize: 17, 
         color: colors.Principal,
         textDecorationLine:"underline",
        

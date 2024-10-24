@@ -1,9 +1,9 @@
-import { View, Text, TextInput} from "react-native";
+import React = require("react");
+import { View, Text, TextInput } from "react-native";
 import { styles } from "./styles";
 import { colors } from '../../styles/globalstyle';
 import { useAuth } from "../../hook/auth";
 import { ButtonInterface } from "../../components/ButtonInterface";
-import React from "react";
 
 
 export interface IPerfil {
@@ -19,72 +19,76 @@ export function Perfil() {
         throw new Error("Function not implemented.");
     }
 
+
     return (
         <View style={styles.container}>
             <View>
                 <Text style={styles.name}>{user?.user.name}</Text>
             </View>
-           <View style={styles.formRow} > 
+            <View style={styles.formRow} >
                 <TextInput
-                    placeholderTextColor={colors.Preto}
+                    placeholderTextColor={colors.Cinza}
                     //style={styles.input}
                     placeholder="Nome: "
                     secureTextEntry={true}
-                    autoCapitalize = "none"
+                    autoCapitalize="none"
                     onChangeText={(i) => handleChange({ name: i })}
                 />
             </View>
-            
+
             <View style={styles.formRow} >
-                 <TextInput
+                <TextInput
                     placeholderTextColor={colors.Cinza}
                     //style={styles.input}
                     placeholder="Email:"
+                    keyboardType: ""
                     secureTextEntry={true}
                     autoCapitalize="none"
-                    onChangeText={(i) => handleChange({ email: i})}
-                        />
+                    onChangeText={(i) => handleChange({ email: i })}
+                />
             </View>
 
-            <View style={styles.formRow} > 
+            <View style={styles.formRow} >
                 <TextInput
-                    placeholderTextColor={colors.Preto}
+                    placeholderTextColor={colors.Cinza}
                     //style={styles.input}
                     placeholder="Telefone: "
                     secureTextEntry={true}
-                    autoCapitalize = "none"
+                    autoCapitalize="none"
                     onChangeText={(i) => handleChange({ telephone: i })}
                 />
             </View>
- 
-            <View style={styles.formRow} > 
+
+            <View style={styles.formRow} >
                 <TextInput
-                    placeholderTextColor={colors.Preto}
+                    placeholderTextColor={colors.Cinza}
                     //style={styles.input}
                     placeholder="Senha: "
                     secureTextEntry={true}
-                    autoCapitalize = "none"
+                    autoCapitalize="none"
                     onChangeText={(i) => handleChange({ password: i })}
                 />
             </View>
 
-            <View style={styles.formRow}> 
-            <Text style={styles.gender}>Gênero</Text>
+            <View style={styles.formRow}>
+                <Text style={styles.gender}>Gênero</Text>
                 <TextInput
-                    placeholderTextColor={colors.Preto}
+                    placeholderTextColor={colors.Cinza}
                     //style={styles.input}
-                    //placeholder="Gênero: "
+                    placeholder="Gênero: "
                     secureTextEntry={true}
-                    autoCapitalize = "none"
-                 />
+                    autoCapitalize="none"
+                />
             </View>
-
-            <ButtonInterface title="Excluir" type="primary"
-                onPressI={async () => await signOut()}
-            />
-             <ButtonInterface title="Salvar" type="primary"
-                onPressI={async () => await signOut()}
-            />
+            <View style={styles.Botoes}>
+                <ButtonInterface title="Excluir" type="primary"
+                    onPressI={async () => await signOut()}
+                />
+                
+                <ButtonInterface title="Salvar" type="primary"
+                    onPressI={async () => await signOut()}
+                />
+            </View>
         </View>
     )
 }

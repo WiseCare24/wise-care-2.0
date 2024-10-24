@@ -1,4 +1,4 @@
-import React from "react";
+import React = require("react");
 import { StyleSheet, TouchableOpacityProps, Text } from "react-native";
 import { TouchableOpacity } from "react-native";
 import { styles } from "./styles";

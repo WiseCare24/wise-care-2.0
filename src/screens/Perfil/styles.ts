@@ -33,17 +33,22 @@ export const styles = StyleSheet.create({
 
     formRow: {
         width: 290,
-        height:60,
+        height: 60,
         margin: 0,
         flexDirection: "row",
         alignItems: "center",
         borderWidth: 0.7,
         borderColor: colors.Branco,
         borderRadius: 30,
-        backgroundColor:colors.Claro
+        backgroundColor: colors.Claro
     },
 
-   gender: {
+    gender: {
         color: colors.Bege
-   }
+    },
+
+    Botoes: {
+        flexDirection: "row"
+    }
+
 })
