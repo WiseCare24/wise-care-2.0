@@ -7,7 +7,8 @@ import { useCallback } from 'react';
 import {useAuth} from "../../hook/auth";
 import React from 'react';
 import { ButtonInterface } from '../../components/ButtonInterface';
-
+import KeyboardAvoidingViewContainer from '../../components/KeyboardAvoidingViewContainer/KeyboardAvoidingViewContainer';
+import { colors } from '../../styles/globalstyle';
 export function ScreenChat (){
     const [messageText, setMessageText] = useState("");
     const {user, signOut} = useAuth()
@@ -17,26 +18,27 @@ export function ScreenChat (){
        setMessageText("");
     }, [messageText]);
      return (
-        <KeyboardAvoidingView>
+        <KeyboardAvoidingView style={{flex:1}} behavior='padding' keyboardVerticalOffset={90}>
          
+            <ButtonInterface type='primary' title="Sair" 
+                onPressI={async()=>await signOut()}>
+                </ButtonInterface>
          <View style={styles.container}>
          <View>
          <Image source={image} style={styles.logo}>
          </Image>
          </View>
-         
+        
             
           <View>
-                <ButtonInterface type='primary' title="Sair" 
-                onPressI={async()=>await signOut()}>
-                </ButtonInterface>
+                
                 
             </View>
             <View style={styles.inputcontainer}>
-               <Text style={styles.p}> WCIA</Text>
+               <Text style={styles.p}></Text>
                
             <TextInput style={styles.textbox} 
-            placeholder='Comece a conversar' 
+            placeholder='Faça uma pergunta incrível' placeholderTextColor={colors.Bege}
             onChangeText={(Text) => setMessageText(Text)}
             value={messageText}/>
                 <TouchableOpacity style={styles.BotaoEnviar} onPress={sendMessage}>
@@ -46,6 +48,7 @@ export function ScreenChat (){
             
          
         </View>
+        
        </KeyboardAvoidingView>
      );
 

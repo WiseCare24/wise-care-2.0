@@ -2,7 +2,7 @@ import React from 'react';
 import { createBottomTabNavigator, BottomTabNavigationProp } from '@react-navigation/bottom-tabs';
 import { Perfil } from '../screens/Perfil';
 import { ScreenChat } from '../screens/Chat';
-import { home } from '../screens/home';
+import { Home } from '../screens/home';
 import { colors } from '../styles/globalstyle';
 import { AntDesign, Ionicons } from '@expo/vector-icons'
 import Entypo from '@expo/vector-icons/Entypo';
@@ -34,6 +34,7 @@ export function TabNavigation() {
                 headerShown: false,
                 tabBarInactiveBackgroundColor: colors.Verdeclarodois,
                 tabBarInactiveTintColor: colors.Cinza,
+               
             }}
         >
             <Tab.Screen name='Chat' component={ScreenChat}
@@ -51,7 +52,7 @@ export function TabNavigation() {
 }}
 />
     
-<Tab.Screen name='Home' component={home}
+<Tab.Screen name='Home' component={Home}
                 options={{
                     tabBarIcon: () => (
                         <Ionicons name="person" size={24} color={ colors.Branco } /> 

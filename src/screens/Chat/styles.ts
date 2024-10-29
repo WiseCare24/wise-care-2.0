@@ -6,17 +6,19 @@ export const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent:'center',
         flex: 1,
-        backgroundColor: colors.Verdeclarodois,
+        backgroundColor: "white",
     },
     textbox:{
-      flex: 1
-     
+      flex: 1,
+       fontFamily: 'serif',
+       alignItems:'flex-start',
     },
     inputcontainer:{
         flexDirection: 'row',
         backgroundColor: colors.Verdeclarodois,
-        paddingTop: 50,
+        paddingTop: 5,
         alignSelf:'center',
+        borderRadius:15,
     },
     p:{
         color:colors.Verdeclarodois,
@@ -33,18 +35,19 @@ export const styles = StyleSheet.create({
         backgroundColor:colors.Principal
     },
     BotaoEnviar:{
-        backgroundColor: colors.Verdeclarodois,
+        backgroundColor: colors.Bege,
         width: 35,
         height: 35,
         alignItems: 'center',
         justifyContent: 'center',
+        borderRadius: 20,
 
     },
     logo:{
-        margin:10,
+        margin:5,
         alignSelf:"center",
         paddingTop: 10,
         resizeMode: 'contain',
-        aspectRatio: 0.3
+        aspectRatio: 0.2
        },
 });

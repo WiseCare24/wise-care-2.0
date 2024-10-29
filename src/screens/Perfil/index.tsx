@@ -41,7 +41,7 @@ export function Perfil() {
                     placeholderTextColor={colors.Cinza}
                     //style={styles.input}
                     placeholder="Email:"
-                    keyboardType: ""
+                    keyboardType= "numeric"
                     secureTextEntry={true}
                     autoCapitalize="none"
                     onChangeText={(i) => handleChange({ email: i })}

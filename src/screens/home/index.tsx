@@ -12,7 +12,7 @@ export interface IAuthenticate {
     password?: string;
 }
 
-export function home() {
+export function Home() {
     
         return (
             <View style={styles.container}>

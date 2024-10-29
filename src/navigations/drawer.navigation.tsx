@@ -18,19 +18,22 @@ export function DrawerNavigation() {
     const Drawer = createDrawerNavigator<DrawerParamList>()
     return (
         <Drawer.Navigator screenOptions={{
-            headerStyle: { backgroundColor: colors.Cinza },
-            headerTintColor: colors.Cinza,
+            headerStyle: { backgroundColor: "#E0E8E1" },
+            headerTintColor: colors.Verdeclaro,
             drawerStyle: {
-                backgroundColor: colors.Cinza,
+                backgroundColor: "#E0E8E1",
             },
-            drawerActiveTintColor: colors.Cinza,
-            drawerInactiveTintColor: colors.Cinza
+            drawerActiveTintColor: colors.Verdeclarodois,
+            drawerInactiveTintColor: colors.Verdeclaro
 
         }}>
             <Drawer.Screen name='Tab' component={TabNavigation}
                 options={{
-                    drawerLabel: 'Perfil',
-                    headerTitle: 'Perfil',
+                    drawerLabel: 'INICIAL',
+                    headerTitle: 'INICIAL',
+                    headerTintColor: 'white',
+                    headerTitleAlign:"center",
+                    headerTitleStyle: {fontFamily:"Itim-Regular"},
                     drawerIcon: () => (
                         <Ionicons name="person" size={24} color={colors.Cinza} />
                     ),
