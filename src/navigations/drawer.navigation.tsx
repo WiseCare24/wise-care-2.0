@@ -3,6 +3,7 @@ import { createDrawerNavigator, DrawerNavigationProp } from '@react-navigation/d
 import { colors } from '../styles/globalstyle';
 import { FontAwesome, Ionicons } from '@expo/vector-icons';
 import { TabNavigation } from './tab.navigation';
+
 type DrawerParamList = {
     Tab: undefined
     Camera: undefined
@@ -29,11 +30,12 @@ export function DrawerNavigation() {
         }}>
             <Drawer.Screen name='Tab' component={TabNavigation}
                 options={{
-                    drawerLabel: 'INICIAL',
-                    headerTitle: 'INICIAL',
-                    headerTintColor: 'white',
+                    drawerLabel: 'WCIA',
+                    headerTitle: 'WCIA',
+                    headerTitleStyle: {
+                        color: "white"
+                      },
                     headerTitleAlign:"center",
-                    headerTitleStyle: {fontFamily:"Itim-Regular"},
                     drawerIcon: () => (
                         <Ionicons name="person" size={24} color={colors.Cinza} />
                     ),

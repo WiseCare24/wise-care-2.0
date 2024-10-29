@@ -10,15 +10,16 @@ export const styles = StyleSheet.create({
     },
     textbox:{
       flex: 1,
-       fontFamily: 'serif',
+      fontFamily:'Itim-Regular',
        alignItems:'flex-start',
     },
     inputcontainer:{
         flexDirection: 'row',
-        backgroundColor: colors.Verdeclarodois,
+        backgroundColor: '#84A9A0',
         paddingTop: 5,
         alignSelf:'center',
-        borderRadius:15,
+        width: 280,
+        borderRadius:20,
     },
     p:{
         color:colors.Verdeclarodois,

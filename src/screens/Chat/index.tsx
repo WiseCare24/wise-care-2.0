@@ -1,9 +1,11 @@
 import { StatusBar} from 'expo-status-bar';
-import {StyleSheet, Text, View, TextInput, TouchableOpacity, KeyboardAvoidingView,Image  } from 'react-native';
+import {StyleSheet, Text, View, TextInput, TouchableOpacity, KeyboardAvoidingView,Image, ScrollView  } from 'react-native';
 import {styles} from "./styles";
 import {Feather} from '@expo/vector-icons';
 import {useState} from 'react';
+import * as Font from 'expo-font';
 import { useCallback } from 'react';
+import { useEffect } from 'react';
 import {useAuth} from "../../hook/auth";
 import React from 'react';
 import { ButtonInterface } from '../../components/ButtonInterface';
@@ -13,16 +15,32 @@ export function ScreenChat (){
     const [messageText, setMessageText] = useState("");
     const {user, signOut} = useAuth()
     const image = require('../../assets/wiselogo.png')
+    const [fontsLoaded, setFontsLoaded] = useState(false);
+
+    const loadFonts = async () => {
+      await Font.loadAsync({
+          'Itim-Regular': require('../../assets/fonts/Itim-Regular.ttf'), 
+      });
+      setFontsLoaded(true);
+  };
+  useEffect(() => {
+   loadFonts();
+}, []);
+
     const sendMessage = useCallback(() => {
        console.log(messageText);
        setMessageText("");
     }, [messageText]);
+
+    if (!fontsLoaded) {
+      return null; 
+  }
      return (
         <KeyboardAvoidingView style={{flex:1}} behavior='padding' keyboardVerticalOffset={90}>
-         
-            <ButtonInterface type='primary' title="Sair" 
-                onPressI={async()=>await signOut()}>
-                </ButtonInterface>
+           <ScrollView contentContainerStyle={{ flexGrow: 1 } }>
+           
+        
+           
          <View style={styles.container}>
          <View>
          <Image source={image} style={styles.logo}>
@@ -35,7 +53,7 @@ export function ScreenChat (){
                 
             </View>
             <View style={styles.inputcontainer}>
-               <Text style={styles.p}></Text>
+             
                
             <TextInput style={styles.textbox} 
             placeholder='Faça uma pergunta incrível' placeholderTextColor={colors.Bege}
@@ -48,7 +66,7 @@ export function ScreenChat (){
             
          
         </View>
-        
+        </ScrollView>
        </KeyboardAvoidingView>
      );
 

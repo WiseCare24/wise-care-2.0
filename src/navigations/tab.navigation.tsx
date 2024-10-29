@@ -1,5 +1,6 @@
 import React from 'react';
-import { createBottomTabNavigator, BottomTabNavigationProp } from '@react-navigation/bottom-tabs';
+import { createBottomTabNavigator, BottomTabNavigationProp, } from '@react-navigation/bottom-tabs';
+import {StyleSheet, Text, View, TextInput, TouchableOpacity, KeyboardAvoidingView,Image, ScrollView, ImageBackground } from 'react-native';
 import { Perfil } from '../screens/Perfil';
 import { ScreenChat } from '../screens/Chat';
 import { Home } from '../screens/home';
@@ -27,13 +28,28 @@ export type TabTypes2 = {
 export function TabNavigation() {
     const Tab = createBottomTabNavigator<TabParamList>()
     return (
+        
+      
         <Tab.Navigator
             screenOptions={{
-                tabBarActiveBackgroundColor: colors.Verdeclarodois,
-                tabBarActiveTintColor: colors.Cinza,
+                tabBarActiveBackgroundColor: colors.Verdeclaro,
+                tabBarActiveTintColor: colors.Principal,
                 headerShown: false,
-                tabBarInactiveBackgroundColor: colors.Verdeclarodois,
-                tabBarInactiveTintColor: colors.Cinza,
+               
+              
+               tabBarStyle:{
+                    
+                    borderWidth: 0.5,
+                    borderBottomWidth: 1,
+                    backgroundColor: colors.Verdeclarodois,
+                    borderTopLeftRadius: 50,
+                    borderTopRightRadius: 50,
+                    borderColor: 'white',
+                    height:60,
+                    elevation: 0,
+                   
+                
+               },
                
             }}
         >
@@ -61,8 +77,9 @@ export function TabNavigation() {
 />
 
 
-            
+
         </Tab.Navigator>
-    )
+        
+    );
 }
 
