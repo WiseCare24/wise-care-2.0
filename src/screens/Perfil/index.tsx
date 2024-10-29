@@ -1,4 +1,4 @@
-import React = require("react");
+import React from "react";
 import { View, Text, TextInput } from "react-native";
 import { styles } from "./styles";
 import { colors } from '../../styles/globalstyle';
@@ -18,6 +18,20 @@ export function Perfil() {
     function handleChange(arg0: { name: string; }): void {
         throw new Error("Function not implemented.");
     }
+
+    function handleChange2(arg0: { email: string; }): void {
+        throw new Error("Function not implemented.");
+    }
+
+    function handleChange3(arg0: { telephone: string; }): void {
+        throw new Error("Function not implemented.");
+    }
+
+    function handleChange4(arg0: { password: string; }): void {
+        throw new Error("Function not implemented.");
+    }
+
+    
 
 
     return (
@@ -41,10 +55,10 @@ export function Perfil() {
                     placeholderTextColor={colors.Cinza}
                     //style={styles.input}
                     placeholder="Email:"
-                    keyboardType= "numeric"
+                    keyboardType="numeric"
                     secureTextEntry={true}
                     autoCapitalize="none"
-                    onChangeText={(i) => handleChange({ email: i })}
+                    onChangeText={(i) => handleChange2({ email: i })}
                 />
             </View>
 
@@ -55,7 +69,7 @@ export function Perfil() {
                     placeholder="Telefone: "
                     secureTextEntry={true}
                     autoCapitalize="none"
-                    onChangeText={(i) => handleChange({ telephone: i })}
+                    onChangeText={(i) => handleChange3({ telephone: i })}
                 />
             </View>
 
@@ -66,28 +80,29 @@ export function Perfil() {
                     placeholder="Senha: "
                     secureTextEntry={true}
                     autoCapitalize="none"
-                    onChangeText={(i) => handleChange({ password: i })}
+                    onChangeText={(i) => handleChange4({ password: i })}
                 />
             </View>
 
-            <View style={styles.formRow}>
+            <View style={styles.genero}>
                 <Text style={styles.gender}>Gênero</Text>
                 <TextInput
                     placeholderTextColor={colors.Cinza}
                     //style={styles.input}
-                    placeholder="Gênero: "
                     secureTextEntry={true}
                     autoCapitalize="none"
                 />
             </View>
-            <View style={styles.Botoes}>
+            <View style={styles.Botao1}>
                 <ButtonInterface title="Excluir" type="primary"
                     onPressI={async () => await signOut()}
                 />
-                
-                <ButtonInterface title="Salvar" type="primary"
-                    onPressI={async () => await signOut()}
-                />
+                <View style={styles.Botao2}>
+                    <ButtonInterface title="Salvar" type="primary"
+                        onPressI={async () => await signOut()}
+                    />
+                </View>
+
             </View>
         </View>
     )

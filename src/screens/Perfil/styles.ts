@@ -14,17 +14,6 @@ export const styles = StyleSheet.create({
         fontWeight: "bold"
     },
 
-    sociais: {
-        backgroundColor: colors.third,
-        marginBottom: 20,
-        flexDirection: "row",
-        padding: 10,
-        borderRadius: 10
-    },
-
-    sociaisText: {
-        marginLeft: 5
-    },
 
     ButtonInterface: {
         padding: 20,
@@ -33,22 +22,44 @@ export const styles = StyleSheet.create({
 
     formRow: {
         width: 290,
-        height: 60,
+        height: 45,
         margin: 0,
         flexDirection: "row",
         alignItems: "center",
         borderWidth: 0.7,
         borderColor: colors.Branco,
-        borderRadius: 30,
-        backgroundColor: colors.Claro
+        borderRadius: 10,
+        backgroundColor: colors.Claro,
+        shadowColor: "#284841",
+        shadowOpacity: 0.7,
+        shadowOffset: {
+           height: 5,
+           width: 5,
+         },
+
+    },
+
+    genero: {
+        backgroundColor: colors.Bege,
+        width: 290,
+        height: 100,
+        alignItems: "center",
+        justifyContent: "flex-start",
+        fontWeight: "bold",
+        borderRadius: 10
     },
 
     gender: {
-        color: colors.Bege
+        justifyContent: "center",
+        fontWeight: "bold",
+    },
+    Botao1: {
+    
+        flexDirection: "row",
     },
 
-    Botoes: {
-        flexDirection: "row"
-    }
+    Botao2:{
+        flexDirection: "row",
+    },
 
 })

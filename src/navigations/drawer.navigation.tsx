@@ -3,10 +3,10 @@ import { createDrawerNavigator, DrawerNavigationProp } from '@react-navigation/d
 import { colors } from '../styles/globalstyle';
 import { FontAwesome, Ionicons } from '@expo/vector-icons';
 import { TabNavigation } from './tab.navigation';
-
+import { Home } from '../screens/home';
 type DrawerParamList = {
     Tab: undefined
-    Camera: undefined
+    Home: undefined
     QrCode: undefined
     Imagem: undefined
 }
@@ -14,6 +14,11 @@ type DrawerScreenNavigationProp = DrawerNavigationProp<DrawerParamList, 'Tab'>
 export type DrawerTypes = {
     navigation: DrawerScreenNavigationProp
 }
+type DrawerScreenNavigationProp2 = DrawerNavigationProp<DrawerParamList, 'Home'>
+export type DrawerTypes2 = {
+    navigation: DrawerScreenNavigationProp2
+}
+
 
 export function DrawerNavigation() {
     const Drawer = createDrawerNavigator<DrawerParamList>()
@@ -40,6 +45,19 @@ export function DrawerNavigation() {
                         <Ionicons name="person" size={24} color={colors.Cinza} />
                     ),
                 }} />
+        <Drawer.Screen name='Home' component={TabNavigation}
+                options={{
+                    drawerLabel: 'Home',
+                    headerTitle: 'Home',
+                    headerTitleStyle: {
+                        color: "white"
+                      },
+                    headerTitleAlign:"center",
+                    drawerIcon: () => (
+                        <Ionicons name="person" size={24} color={colors.Cinza} />
+                    ),
+                }} />
+
             
         </Drawer.Navigator>
 

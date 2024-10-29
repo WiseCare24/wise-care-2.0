@@ -5,8 +5,8 @@ import { Perfil } from '../screens/Perfil';
 import { ScreenChat } from '../screens/Chat';
 import { Home } from '../screens/home';
 import { colors } from '../styles/globalstyle';
-import { AntDesign, Ionicons } from '@expo/vector-icons'
-import Entypo from '@expo/vector-icons/Entypo';
+import { AntDesign, Ionicons, MaterialCommunityIcons, Entypo, FontAwesome5} from '@expo/vector-icons'
+
 
 type TabParamList = {
     Chat: undefined
@@ -45,7 +45,7 @@ export function TabNavigation() {
                     borderTopLeftRadius: 50,
                     borderTopRightRadius: 50,
                     borderColor: 'white',
-                    height:60,
+                    height:80,
                     elevation: 0,
                    
                 
@@ -56,25 +56,26 @@ export function TabNavigation() {
             <Tab.Screen name='Chat' component={ScreenChat}
                 options={{
                     tabBarIcon: () => (
-                        <Entypo name="chat" size={24} color={ colors.Branco } /> 
+                        <MaterialCommunityIcons name="message-star-outline" size={30} color={colors.Cinza} />
+                    ),
+}}
+/>
+<Tab.Screen name='Home' component={Home}
+                options={{
+                    tabBarIcon: () => (
+                        <Ionicons name="home" size={30} color={colors.Cinza} /> 
                     ),
 }}
 />
             <Tab.Screen name='Perfil' component={Perfil}
                 options={{
                     tabBarIcon: () => (
-                        <Ionicons name="person" size={24} color={ colors.Branco } /> 
+                        <FontAwesome5 name="user-nurse" size={30} color={colors.Cinza} />
                     ),
 }}
 />
     
-<Tab.Screen name='Home' component={Home}
-                options={{
-                    tabBarIcon: () => (
-                        <Ionicons name="person" size={24} color={ colors.Branco } /> 
-                    ),
-}}
-/>
+
 
 
 

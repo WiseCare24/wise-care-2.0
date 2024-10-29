@@ -11,37 +11,43 @@ export const styles = StyleSheet.create({
     textbox:{
       flex: 1,
       fontFamily:'Itim-Regular',
-       alignItems:'flex-start',
+       alignItems:'center',
+       marginLeft: 10,
+       marginBottom:5 , 
+       color: colors.Bege
     },
     inputcontainer:{
         flexDirection: 'row',
         backgroundColor: '#84A9A0',
         paddingTop: 5,
-        alignSelf:'center',
-        width: 280,
+        alignItems:'center',
+        height:40,
+        width: 320,
         borderRadius:20,
     },
     p:{
         color:colors.Verdeclarodois,
     },
     formRow: {
-        width: 290,
+        width: 295,
         height:60,
         margin: 0,
         flexDirection: "row",
         alignItems: "center",
         borderWidth: 0.7,
         borderColor: colors.Verdeclaro,
-        borderRadius: 30,
+        borderRadius: 20,
         backgroundColor:colors.Principal
     },
     BotaoEnviar:{
         backgroundColor: colors.Bege,
-        width: 35,
-        height: 35,
+        width: 30,
+        height: 30,
         alignItems: 'center',
         justifyContent: 'center',
         borderRadius: 20,
+        marginEnd:8,
+        marginBottom:4 ,
 
     },
     logo:{

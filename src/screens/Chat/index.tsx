@@ -1,7 +1,7 @@
 import { StatusBar} from 'expo-status-bar';
 import {StyleSheet, Text, View, TextInput, TouchableOpacity, KeyboardAvoidingView,Image, ScrollView  } from 'react-native';
 import {styles} from "./styles";
-import {Feather} from '@expo/vector-icons';
+import {Feather, Octicons} from '@expo/vector-icons';
 import {useState} from 'react';
 import * as Font from 'expo-font';
 import { useCallback } from 'react';
@@ -56,11 +56,11 @@ export function ScreenChat (){
              
                
             <TextInput style={styles.textbox} 
-            placeholder='Faça uma pergunta incrível' placeholderTextColor={colors.Bege}
+            placeholder='Faça uma pergunta incrível' placeholderTextColor={colors.Bege} 
             onChangeText={(Text) => setMessageText(Text)}
             value={messageText}/>
                 <TouchableOpacity style={styles.BotaoEnviar} onPress={sendMessage}>
-                 <Feather name="send" size={18} color="black" />
+                <Octicons name="paper-airplane" size={20} color="black" />
                 </TouchableOpacity>
           </View>
             

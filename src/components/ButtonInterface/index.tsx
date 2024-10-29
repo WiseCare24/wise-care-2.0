@@ -25,6 +25,8 @@ export function ButtonInterface({ onPressI, title, type, ...rest }: IBSlider) {
         >
 
 <Text style={styles.text}>{title}</Text>
+
+
 </TouchableOpacity>
     )
 
