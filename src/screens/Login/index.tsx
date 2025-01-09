@@ -46,7 +46,7 @@ export function Login({ navigation }: LoginTypes) {
 
                     <Text style={styles.title} >Login</Text>
                     <View style={styles.container2}>
-                        <Text style={styles.nominho}> Name </Text>
+                        <Text style={styles.nominho}> Nome </Text>
                      <View style={styles.formRow}>
 
                         <FontAwesome name="user-circle" style={styles.icon} color={colors.Cinza} />
